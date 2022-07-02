@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/patika-react-todo-list/static/css/main.e7fe0695.css",
+    "main.js": "/patika-react-todo-list/static/js/main.60aef5d8.js",
+    "index.html": "/patika-react-todo-list/index.html",
+    "main.e7fe0695.css.map": "/patika-react-todo-list/static/css/main.e7fe0695.css.map",
+    "main.60aef5d8.js.map": "/patika-react-todo-list/static/js/main.60aef5d8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e7fe0695.css",
+    "static/js/main.60aef5d8.js"
+  ]
+}
