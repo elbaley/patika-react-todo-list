@@ -24,4 +24,4 @@ const useTodoContext = () => {
   return useContext(todoContext);
 };
 
-export { TodoProvider, initialState, useTodoContext };
+export { TodoProvider, useTodoContext };
