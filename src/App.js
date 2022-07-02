@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import { Header, Footer, List, TodoFooter } from "./components/";
+import { TOGGLE_ALL_TODO } from "./context/actions";
+import { useTodoContext } from "./context/todoContext";
 
 function App() {
+  const { dispatch } = useTodoContext();
+  const [toggleAllComplete, setToggleAllComplete] = useState(true);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <section className='todoapp'>
+        <Header />
+        <section className='main'>
+          <button
+            onClick={() => {
+              dispatch({
+                type: TOGGLE_ALL_TODO,
+                payload: {
+                  complete: toggleAllComplete,
+                },
+              });
+              setToggleAllComplete(!toggleAllComplete);
+            }}
+            className='toggle-all-todo'
+          >
+            ❯
+          </button>
+          <List />
+        </section>
+        <TodoFooter />
+      </section>
+      <Footer />
+    </>
   );
 }
 
